@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video, input, select, textarea{margin:0;padding:0;border:0;font-size:90%;font:inherit;color:inherit;vertical-align:middle;}
+article, aside, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+input, textarea, select {color:#454545; outline:none; background:#FCFAF8;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none; outline:none;}
+a:focus, button:focus, input[type="button"], input, textarea {outline:none;}
+img{max-width:100%;}
+/*end reset*/
+
+body{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:90%;
+	color:rgb(62, 62, 60);
+    margin: 0;
+}
+.left-pane {
+	width:25%;
+	float:left;
+	box-sizing:border-box;
+	border-right:2px solid #dddbdb;
+	height:100vmin;
+}
+.input-box {
+	padding:20px 15px;
+	border-bottom:2px solid #dddbdb;
+}
+.list-box {
+	padding:20px 15px;
+}
+.input-box input{
+	padding:4px;
+	width:calc(100% - 50px);
+	border:1px solid #ccc;
+	border-radius:2px;
+	background:#fff;
+}
+.rss-search {
+	width:20px;
+	height:20px;
+	display:inline-block;
+	margin-left:10px;
+	background:url(../images/search.png) no-repeat 50% 50% #3B93EC;
+	border:1px solid #2465AE;
+	border-radius:2px;
+	padding:2px 4px;
+}
+.red-border {
+	border:1px solid #c30000!important;
+}
+.right-pane {
+	width:75%;
+	float:left;
+	box-sizing:border-box;
+	height:100vmin;
+	overflow:auto;
+	padding:20px;
+}
+.right-pane .feed-container {
+	padding:10px;
+	border:1px solid #ccc;
+	border-radius:2px;
+	margin:15px 0px;
+	max-height:400px;
+	overflow:auto;
+}
+.right-pane h2 {
+	padding:20px 0px;
+	font-size:150%;
+}
+.centerAlign {
+	text-align:center;
+}
+.bold {
+	font-weight:bold;
+}
+.ajax-loader-ab {
+	position: absolute;
+	top:0;
+	left:0;
+	width:calc(100%);
+	height:calc(100%);
+	background:#454545;
+	opacity:0.7;
+	z-index:1000;
+	border-radius: 2px;
+}
+.loader-ab {
+    border: 5px solid rgb(201, 199, 199); /* Light grey */
+    border-top: 5px solid #096;
+	border-bottom: 5px solid #FC3;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+	position: absolute;
+	left:calc(50% - 20px);
+	top:calc(50% - 20px);
+    box-sizing: border-box;
+	z-index:1001;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.url-list {
+	width:calc(100% - 25px);
+	float:left;
+  	white-space: nowrap;
+	text-overflow: ellipsis;
+  	overflow: hidden;
+}
+.remove-url {
+	font-weight:bold;
+	color:#3B93EC;
+	margin-left:10px;
+}
